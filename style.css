@@ -13,6 +13,7 @@ html {
     overflow-x: hidden;
     width: 100vw;
     height: 100vh;
+    position: relative;
 }
 
 body {
@@ -65,23 +66,26 @@ header {
     width: 100%;
     height: auto;
     display: flex;
+    justify-content: center;
 }
 
 .right {
     width: 40%;
-    margin: 3.2rem 1.5rem 5rem 1rem;
+    max-width: 580px;
+    margin: 3.2rem 1.5rem 5rem 10rem;
 }
 
 #mockup {
     margin: 1rem 2.5rem 3.5rem 4.5rem;
     width: 50%;
+    max-width: 900px;
 }
 
 .icons {
     text-align: right;
     margin: 0;
-    position: relative;
-    top: 180px;
+    position: absolute;
+    bottom: 10px;
     right: 30px;
 }
 
@@ -93,9 +97,11 @@ i {
 footer {
     text-align: center;
     margin: auto;
+
 }
 
 .attribution {
+
     font-size: 11px;
     text-align: center;
     width: 100%;
@@ -103,4 +109,62 @@ footer {
 
 .attribution a {
     color: hsl(228, 80%, 10%);
+}
+
+@media (max-width: 1100px) {
+    header {
+        margin: 2rem 0 3.5rem 2rem;
+    }
+
+    header img {
+        width: 45%;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #mockup {
+        margin: auto;
+        width: 80%;
+    }
+
+    body {
+        background-image: url("bg-mobile.svg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+        width: 95%;
+        margin: 1.5rem auto;
+    }
+
+    p {
+        font-size: 1.1rem;
+        margin: 1rem auto;
+    }
+
+    .right {
+        margin: 0.5rem auto;
+        text-align: center;
+        width: 95%;
+    }
+
+    button {
+        width: 200px;
+        margin-bottom: 3.5rem;
+    }
+
+    .icons {
+        position: relative;
+        margin: 1rem auto;
+        margin-bottom: 2rem;
+        text-align: center;
+        right: 0;
+        bottom: 0;
+    }
+
 }
